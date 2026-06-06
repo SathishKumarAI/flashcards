@@ -88,3 +88,32 @@ python3 -m http.server 8000   # open http://localhost:8000
 - **Arch externally-managed Python** → must use a venv for `pip install genanki`.
 - **CSV import in Anki** needs manual field mapping → `.apkg` avoids it.
 - **Web app needs HTTP** (ES modules + fetch); `file://` won't load decks.
+
+---
+
+### 6. "Bigger Anki view / zoom + more PDF→cards methods"
+**Fix (zoom):**
+- Live: `Ctrl + =` in · `Ctrl + -` out · `Ctrl + 0` reset · `Ctrl + wheel`.
+- Global: Tools → Preferences → Appearance → UI scaling → 1.25–1.5 → restart.
+- Permanent card font: baked **28px dark CSS** into `build_apkg.py` model → rebuilt `agent-evals.apkg`.
+
+**Fix (more methods):** added `pdf_chunk.py` — splits a large PDF into LLM-ready
+prompted text chunks (`pdftotext` per page-range). Workflow: chunk → feed each to an
+LLM → collect `front,back` CSV → concat → `build_apkg.py` → import. Methods table
+(Claude session / apkg builder / Anki CSV import / AnkiBrain add-on / pdftotext+LLM)
+documented in chat.
+
+### 7. "Run it"
+Served web app: `python3 -m http.server 8000` → http://localhost:8000 (HTTP 200, browser opened). Stopped after.
+
+### 8. "Push to GitHub"
+- `git init -b main`, `.gitignore` (excludes `.venv/`, `chunks/`, `.claude/`).
+- Committed 13 files, `gh repo create flashcards --public --source=. --push`.
+- **Live:** https://github.com/SathishKumarAI/flashcards
+
+## New files this round
+| File | Purpose |
+|---|---|
+| `pdf_chunk.py` | large PDF → LLM-ready prompted text chunks |
+| `.gitignore` | exclude venv/chunks/.claude |
+| `build_apkg.py` | now bakes 28px dark card CSS |
