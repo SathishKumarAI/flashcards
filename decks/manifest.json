@@ -1,0 +1,7 @@
+{
+  "decks": [
+    { "name": "Spanish Basics", "file": "spanish-basics.csv", "description": "20 essential Spanish words & phrases" },
+    { "name": "World Capitals", "file": "world-capitals.csv", "description": "20 country capitals" },
+    { "name": "CS Fundamentals", "file": "cs-fundamentals.csv", "description": "20 computer science concepts" }
+  ]
+}

@@ -1,0 +1,21 @@
+front,back
+Time complexity of binary search,O(log n)
+Time complexity of quicksort (average),O(n log n)
+Data structure: LIFO,Stack
+Data structure: FIFO,Queue
+What does DNS resolve?,Domain names to IP addresses
+HTTP status 404 means,Not Found
+HTTP status 500 means,Internal Server Error
+ACID stands for,Atomicity, Consistency, Isolation, Durability
+Big-O of hash table lookup (average),O(1)
+What is a deadlock?,Two+ processes each waiting on a resource the other holds
+TCP vs UDP: which is reliable?,TCP
+What is idempotency?,Same request applied multiple times yields same result
+Process vs thread: which shares memory?,Threads (within a process)
+What is a race condition?,Outcome depends on uncontrolled timing of concurrent ops
+Normalize a database to reduce,Data redundancy
+What layer is IP on (OSI)?,Network layer (Layer 3)
+Big-O of traversing a linked list,O(n)
+What is a primary key?,Column(s) uniquely identifying a row
+REST: which method is idempotent and safe?,GET
+What is the CAP theorem trade-off?,Consistency, Availability, Partition tolerance — pick 2

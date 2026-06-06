@@ -1,0 +1,14 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Generated PDF chunks
+chunks/
+
+# OS
+.DS_Store
+
+# Editor
+.claude/
+fix-wezterm.sh
